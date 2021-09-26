@@ -22,12 +22,12 @@ app.post('/', (req, res) => {
             res.send(err)
         }
         else {
-            json = utils.excelTojson(req.file)
-            res.send(json)
+            json_response = utils.excelTojson(req.file)
+            res.send(json_response)
         }
     })
 })
 
 
 
-app.listen(8000)
+app.listen(3000)
