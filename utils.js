@@ -21,7 +21,7 @@ const sheet_to_json = (sheet) => {
   delete sheet['!ref']
   delete sheet['!rows']
 
-
+  
   
   Object.keys(sheet).forEach(key=>{
     const [_, column, row] = key.match(/([a-zA-Z]+)(\d+)/)

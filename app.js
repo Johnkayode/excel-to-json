@@ -22,7 +22,14 @@ app.post('/', (req, res) => {
             res.send(err)
         }
         else {
-            json_response = utils.excelTojson(req.file)
+            try{
+                json_response = utils.excelTojson(req.file)
+            }
+            catch(err){
+                json_response = {
+                    'error': 'There was an error processing this file'
+                }
+            }
             res.send(json_response)
         }
     })
